@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--Description-->
     
@@ -36,14 +36,18 @@
     <title>cloud - 云团</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/sass/main.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <link rel="stylesheet" href="/sass/ie9.css">
     <![endif]-->
 
     <!-- Gallery -->
@@ -57,69 +61,70 @@
 
 <body>
 
-<!-- Menu -->
-<!-- Navigation -->
-<header>
-    <div class="logo">
-        <a href="/">云团</a>
-    </div><!-- end logo -->
+    <div id="wrapper">
 
-    <div id="menu_icon"></div>
-    <nav>
-        <ul>
-            
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">云团</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
             <li>
                 <a href="/">Home</a>
             </li>
-            
+        
             <li>
                 <a href="/archives">Archives</a>
             </li>
-            
-        </ul>
-    </nav><!-- end navigation menu -->
-
-    <div class="footer clearfix">
-    
-    </div ><!-- end footer -->
-</header><!-- end header -->
-
-<!-- Main Content -->
-<section class="main clearfix">
-
-    <section class="top" style="background: url('/image/heart.jpg');">
-        <div class="wrapper content_header clearfix">
-            
-
-<div class="work_nav">
-
-    <ul class="btn clearfix">
         
-        <li><a class="previous disabled"></a></li>
-        
-        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
-        
-        <li><a href="/2016/06/05/hello-world/" class="next" data-title="Hello World"></a></li>
+            <li>
+                <a href="/about.html">About</a>
+            </li>
         
     </ul>
-
-</div><!-- end work_nav -->
-            <h1 class="title">cloud</h1>
-        </div>
-    </section><!-- end top -->
-
-    <section class="wrapper">
-        <div class="content">
-
-            <!-- Gallery -->
-            
-
-            <!-- Content -->
-            <p>云是大气中水汽凝结（凝华）成的水滴、过冷水滴、冰晶或者它们混合组成的漂浮在空中的可见聚合物。云是地球上庞大的水循环的有形的结果。太阳照在地球的表面，水蒸发形成水蒸气，一旦水汽过饱和，水分子就会聚集在空气中的微尘（凝结核）周围，由此产生的水滴或冰晶将阳光散射到各个方向，这就产生了云的外观。并且，云可以形成各种的形状，也因在天上的不同高度、形态而分为许多种。</p>
+</nav>
 
 
-            <!-- Tags -->
-            
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>cloud</h1>
+
+
+    <span class="image main"><img src="/image/heart.jpg" alt="" /></span>
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>云是大气中水汽凝结（凝华）成的水滴、过冷水滴、冰晶或者它们混合组成的漂浮在空中的可见聚合物。云是地球上庞大的水循环的有形的结果。太阳照在地球的表面，水蒸发形成水蒸气，一旦水汽过饱和，水分子就会聚集在空气中的微尘（凝结核）周围，由此产生的水滴或冰晶将阳光散射到各个方向，这就产生了云的外观。并且，云可以形成各种的形状，也因在天上的不同高度、形态而分为许多种。</p>
+<iframe height="498" width="510" src="http://player.youku.com/embed/XNDc3MTA3NTI0" frameborder="0" allowfullscreen></iframe>
+
+<!-- Tags -->
+
 
 
 <div class="tags">
@@ -128,20 +133,87 @@
 
 
 
-            <!-- Comments -->
-            <div>
-                
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
 
 
             </div>
-        </div><!-- end content -->
-    </section>
-</section><!-- end main -->
+        </div>
 
-<!-- After footer scripts -->
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                云团将精选最美丽的气象图片，以最趣味、最专业的方式，将气象知识分享给您；云团是您交友和学习的应许之地，在这里可以尽情的分享您和气象的故事，并且找到知音； 云团是一个承诺，这里不仅力倡环保，更有身体力行，为了我们心中的那份执着。寄送一份敬畏给你的生活，让云团装饰你的窗子。
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/?lang=en" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://www.facebook.com/" class="icon style2 fa-facebook" target="_blank" ><span class="label">Facebook</span></a></li>
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://dribbble.com/" class="icon style2 fa-dribbble" target="_blank" ><span class="label">Dribbble</span></a></li>
+                
+                
+                    <li><a href="https://github.com/klugjo/hexo-theme-phantom/commits?author=klugjo" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                    <li><a href="https://plus.google.com/" class="icon style2 fa-google-plus" target="_blank" ><span class="label">Google+</span></a></li>
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+                
+                    <li><a href="\#" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+                    <li><a href="\#" class="icon style2 fa-rss" target="_blank" ><span class="label">RSS</span></a></li>
+                
+            </ul>
+        </section>
+         
+    </div>
+</footer>
+    </div>
 
+    <!-- After footer scripts -->
+    
 <!-- jQuery -->
-<script src="/js/jquery.js"></script>
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
 
 <!-- Custom Code -->
 <script src="/js/main.js"></script>
@@ -150,6 +222,18 @@
 <script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'klugjo';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 </body>
